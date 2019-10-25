@@ -10,7 +10,7 @@ let CFG = {
   lines_count: 6,
   point_count: 12,
   noise_inc: 0.004,
-  noise_amp: 600, // set in setup
+  noise_amp: 1000, // set in setup
   time_divider: 10
 
 }
