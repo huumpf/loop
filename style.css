@@ -8,6 +8,25 @@ canvas {
   z-index: -1;
 }
 
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: normal;
+  margin: 0 3rem;
+}
+
+p {
+  font-size: 22px;
+}
+
+
 .header {
   display: block;
   height: 100vh;
@@ -28,16 +47,33 @@ canvas {
 }
 
 .logo {
-  width: 140px;
-  opacity: 0.05;
+  width: 50px;
 }
 
 .content-section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.content-section > .two_blocks {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content-section > .half {
+  background-color: rgba(100, 100, 20, 0.5);
+  color:white;
+  height: 100vh;
+  width: 50%;
+}
+
+.content-section > .cs_images {
   display:flex;
   align-items: center;
   justify-content: space-around;
-  width: 100%;
-  height: 100vh;
 }
 
 .content-section > p {
@@ -57,21 +93,4 @@ canvas {
   z-index: 2;
   margin-left: -100px;
   width: 200px;
-}
-
-h1, h2, h3, h4, h5, p {
-  font-family: 'Playfair Display', serif;
-  color: white;
-}
-
-h1 {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  letter-spacing: 0.2rem;
-  font-weight: normal;
-  margin: 0 3rem;
-}
-
-p {
-  font-size: 22px;
 }
