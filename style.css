@@ -14,7 +14,20 @@ h1, h2, h3, h4, h5, p {
   color: white;
 }
 
+.golden {
+  color: rgba(255, 200, 130, 0.7);
+  font-size: 1.5rem;
+}
+
 h1 {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color: rgba(255, 255, 255, 0.7)
+}
+
+h2 {
   font-size: 3rem;
   line-height: 3.5rem;
   letter-spacing: 0.2rem;
@@ -48,6 +61,7 @@ p {
 
 .logo {
   width: 50px;
+  opacity: 0.8;
 }
 
 .content-section {

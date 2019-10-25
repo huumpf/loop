@@ -10,7 +10,7 @@ let CFG = {
   lines_count: 6,
   point_count: 12,
   noise_inc: 0.004,
-  noise_amp: 400, // set in setup
+  noise_amp: 600, // set in setup
   time_divider: 10
 
 }
@@ -50,8 +50,8 @@ function makePoints( mod ) {
 
   for (let i = 0; i < CFG.point_count; i++) {
     let pt = new p5.Vector(0, i * height/CFG.point_count);
-    let noise_displace_x = ( noise(pt.y * CFG.noise_inc, noise_time + mod/CFG.time_divider) -0.5 ) * CFG.noise_amp*10;
-    let noise_displace_y = ( noise(pt.x * CFG.noise_inc, noise_time + mod/CFG.time_divider) -0.5 ) * CFG.noise_amp*3;
+    let noise_displace_x = ( noise(pt.y * CFG.noise_inc, noise_time + mod/CFG.time_divider) -0.5 ) * CFG.noise_amp;
+    let noise_displace_y = ( noise(pt.x * CFG.noise_inc, noise_time + mod/CFG.time_divider) -0.5 ) * CFG.noise_amp;
     pt.add( new p5.Vector( noise_displace_x, noise_displace_y ));
     _points.push( pt );
   }
