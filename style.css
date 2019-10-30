@@ -8,9 +8,15 @@ canvas {
   z-index: -1;
 }
 
-
 h1, h2, h3, h4, h5, p, button {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 5px;
   color: white;
 }
 
@@ -123,14 +129,14 @@ button {
   fisplay: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.01);
   color:white;
   height: 100vh;
   width: 50%;
 }
 
 .content-section > .half:last-child {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
 .content-section > .cs_images {
