@@ -19,7 +19,7 @@ let CFG = {
 function setup() {
 
   canvas = createCanvas(window.innerWidth, window.innerHeight*4);
-  canvas.parent("header");
+  canvas.parent("background");
   background( 70 );
   smooth();
 

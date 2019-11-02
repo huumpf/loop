@@ -3,9 +3,8 @@
   padding: 0;
 }
 
-canvas {
-  display: block;
-  z-index: -1;
+body {
+  background-color: rgba(0, 0, 0, 0.97);
 }
 
 h1, h2, h3, h4, h5, p, button {
@@ -16,8 +15,12 @@ h1, h2, h3, h4, h5, p, button {
 h2 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  letter-spacing: 5px;
   color: white;
+  font-size: 5rem;
+  line-height: 5.5rem;
+  font-weight: 100;
+  margin: 0 3rem;
+  margin-top: 1rem;
 }
 
 .golden {
@@ -34,26 +37,50 @@ h1 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 11px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.3);
   flex-grow: 1;
-}
-
-h2 {
-  font-size: 5rem;
-  line-height: 5.5rem;
-  font-weight: 100;
-  margin: 0 3rem;
-  flex-grow: 0.5;
 }
 
 p {
   font-size: 22px;
 }
 
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.background {
+  /* position:absolute;
+  display:block;
+  z-index:-1; */
+}
 
 .header {
   display: block;
   height: 100vh;
+}
+
+.intro {
+  flex-grow: 0.5;
 }
 
 .header-content {  
@@ -77,7 +104,7 @@ p {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 200px;
 }
 
 button {
@@ -90,10 +117,31 @@ button {
   background-color: rgba(255, 200, 130, 0.1);
   border-radius: 24px;
   border: none;
-  margin-right: 20px;
+  margin-right: 80px;
   font-size: 1rem;
   letter-spacing: 3px;
   color: white;
+}
+
+.navigation > .icon {
+  margin-right: 100px;
+  width:180px;
+  height:48px;
+  text-align:right;
+}
+
+.navigation > .icon > img {
+  width:36px;
+  opacity:0.9;
+}
+
+.navigation > .icon > img:hover {
+  width:36px;
+  opacity:1;
+}
+
+.navigation > h1 {
+  margin-top:10px;
 }
 
 .navigation > button:hover {
@@ -101,15 +149,30 @@ button {
   color: black;
 }
 
+.navigation > button:active {
+  background-color: rgba(255, 200, 130, 1);
+}
+
 .logo {
   width: 180px;
-  margin-left: 40px;
+  margin-left: 100px;
   text-align: left;
 }
 
 .logo > img {
   width: 30px;
   opacity: 0.8;
+}
+
+.marble {
+  width:50%;
+  min-width:600px;
+  height:100vh;
+  margin: 0 auto;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  /* border: 1px solid red; */
+  margin-bottom: 200px;
+  margin-top:200px;
 }
 
 .content-section {
