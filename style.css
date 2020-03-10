@@ -17,11 +17,13 @@ canvas {
   margin: 0 auto;
 }
 
-.intro {
+.stack {
   height: 100vh;
   display: flex;
+}
+
+.intro {
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   text-align: center;
 }
@@ -37,9 +39,26 @@ canvas {
 .navbar {
   position: fixed;
   width: 100%;
-  border: 1px solid red;
-  padding: 3rem 5rem;
   display: flex;
+  justify-content: space-between;
+}
+
+.navbar__icons {
+  margin-right: 2rem;
+  padding: 2rem 0;
+  margin: 4.5rem 8rem 0 0;
+}
+
+.navbar__icon {
+  height: 20px;
+}
+
+.navbar__icon:first-child {
+  margin-right: 4rem;
+}
+
+h1 {
+  margin: 5rem 0 0 5rem;
 }
 
 .titilium {
@@ -61,7 +80,7 @@ canvas {
   font-family: 'Playfair Display', sans-serif;
   font-style: italic;
   letter-spacing: -1px;
-  line-height: 10rem;
+  line-height: 11rem;
 }
 
 .space-down {
