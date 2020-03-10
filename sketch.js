@@ -7,10 +7,10 @@ var points = [];
 
 const CFG = {
 
-  point_count: 20,
-  radius: 200,
+  point_count: 12,
+  radius: 300,
   noise_inc: 0.005,
-  noise_amp: 400
+  noise_amp: 300
 
 }
 
@@ -18,8 +18,9 @@ const CFG = {
 function setup() {
 
   canvas = createCanvas(window.innerWidth, window.innerHeight);
-  // noLoop();
-  background( 70 );
+  canvas.parent("background_anim");
+  noLoop();
+  background( 40 );
   smooth();
 
 }
@@ -27,9 +28,9 @@ function setup() {
 
 function draw() {
 
-  background(10, 15);
+  background(20, 20);
   
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 10; i++) {
     points.push( makePoints(i) );
     drawPoints();
   }
@@ -60,10 +61,13 @@ function drawPoints() {
   noFill();
   points.forEach(pts => {
     beginShape();
+    curveVertex(points[points.length-1].x, points[points.length-1].y);
     for (let i = 0; i < points.length; i++) {
       curveVertex(points[i].x, points[i].y);
     }
-    endShape(CLOSE);
+    curveVertex(points[0].x, points[0].y);
+    curveVertex(points[1].x, points[1].y);
+    endShape();
   });
 }
 
